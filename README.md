@@ -2,7 +2,7 @@
 
 [moltin](https://moltin.com) is a fully baked eCommerce REST API for developers.
 
-This repo is a WIP. Contributors welcome 👋
+Corrected Sample for categories and collections.   Updated sample query
 
 ## Installation
 
@@ -34,7 +34,7 @@ Visit [http://localhost:4000/playground](http://localhost:4000/playground) where
 
 ```graphql
 {
-  allProducts {
+  products {
     id
     name
     description
@@ -47,7 +47,7 @@ Visit [http://localhost:4000/playground](http://localhost:4000/playground) where
     description
   }
 
-  allBrands {
+  brands {
     id
     name
   }
