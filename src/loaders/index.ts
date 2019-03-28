@@ -1,6 +1,6 @@
 import * as DataLoader from 'dataloader'
 
-import { Moltin } from '../'
+import { Moltin } from '..'
 
 const brandLoader = new DataLoader(async brandIds => {
   return brandIds.map(async id => {
@@ -31,8 +31,24 @@ const mainImageLoader = new DataLoader(async imageIds => {
   })
 })
 
+const categoryLoader = new DataLoader(async categoryIds => {
+  return categoryIds.map(async id => {
+    const { data } = await Moltin.Categories.Get(id)
+    return data
+  })
+})
+
+const collectionLoader = new DataLoader(async collectionIds => {
+  return collectionIds.map(async id => {
+    const { data } = await Moltin.Collections.Get(id)
+    return data
+  })
+})
+
 export default {
   brandLoader,
   mainImageLoader,
   productLoader,
+  categoryLoader,
+  collectionLoader,
 }
