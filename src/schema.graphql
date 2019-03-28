@@ -7,6 +7,7 @@ type Product {
   price: [ProductPrice]
   brands: [Brand]
   main_image: MainImage
+  categories: [Category]
 }
 
 type ProductPrice {
